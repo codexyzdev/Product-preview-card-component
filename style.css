@@ -1,0 +1,138 @@
+:root {
+  --fn-fraunces: "Fraunces", serif;
+  --fn-montserrat: "Montserrat", sans-serif;
+
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  /* ### Neutral */
+
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.attribution {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+img {
+  max-width: 100%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: var(--fn-montserrat);
+  background-color: var(--Cream);
+}
+.card {
+  max-width: 343px;
+  background-color: var(--White);
+  border-radius: 0.4rem;
+}
+.card__img {
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.card__content {
+  padding: 24px;
+}
+.card__span {
+  color: var(--Dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+.card__title {
+  font-size: 30px;
+  font-family: var(--fn-fraunces);
+  margin-top: 0.5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.card__paragraph {
+  font-weight: 500;
+  font-size: 0.89rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--Dark-grayish-blue);
+}
+.card__price {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card__price--green {
+  font-family: var(--fn-fraunces);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-cyan);
+}
+.card__price--small {
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  font-weight: 400;
+  color: var(--Dark-grayish-blue);
+  align-self: center;
+}
+
+.card__btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  background-color: var(--dark-cyan);
+  color: white;
+  font-weight: 700;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__btn:hover {
+  background-color: var(--Very-dark-blue);
+  transition: background-color 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 640px) {
+  .card {
+    max-width: 542px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card__content {
+    padding: 28px;
+  }
+  .card__span {
+    font-size: 0.7rem;
+  }
+  .card__paragraph {
+    font-size: 0.98rem;
+  }
+  .card__img {
+    border-radius: 0.4rem 0 0 0.4rem;
+    height: 100%;
+  }
+  .card__price--green {
+    font-size: 2rem;
+  }
+}
